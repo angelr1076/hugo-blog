@@ -14,18 +14,18 @@ copyright = "Angel Rodriguez"
 
 [params]
   author = "Angel Rodriguez"
-  motto = "angelroddie.com"
+  motto = "Portfolio site: angelroddie.com"
   description = "A place to blog"
   avatar = "https://res.cloudinary.com/angelrodriguez/image/upload/v1541444428/Screen_Shot_2018-11-05_at_1.56.56_PM.png"
   
   email = "angelr1076@gmail.com"
-  github = "https://github.com/angelr1076"
+  # github = ""
   linkedin = "https://www.linkedin.com/in/angelrodriguezlead/"
   # codepen = ""
   # stackoverflow = ""
 
   siteStartYear = 2018
-  aboutHeader = "AboutMe"
+  aboutHeader = "About Me"
 
   paginate = 4
 
