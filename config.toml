@@ -1,0 +1,32 @@
+baseurl = "https://example.com"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Hugo Theme Dream"
+theme = "hugo-theme-dream"
+
+copyright = "Angel Rodriguez"
+
+# googleAnalytics = ""
+
+# disqusShortname = ""
+
+# enableRobotsTXT = true
+
+[params]
+  author = "Angel Rodriguez"
+  motto = "angelroddie.com"
+  description = "A place to blog"
+  avatar = "https://res.cloudinary.com/angelrodriguez/image/upload/v1541444428/Screen_Shot_2018-11-05_at_1.56.56_PM.png"
+  
+  email = "angelr1076@gmail.com"
+  github = "https://github.com/angelr1076"
+  linkedin = "https://www.linkedin.com/in/angelrodriguezlead/"
+  # codepen = ""
+  # stackoverflow = ""
+
+  siteStartYear = 2018
+  aboutHeader = "AboutMe"
+
+  paginate = 4
+
+  favicon = "https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,h_20,w_20/v1528903608/4.ico"
