@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angel&#39;s Blog</title>
-    <link>https://example.com/</link>
+    <link>https://angelroddy.com/</link>
     <description>Recent content on Angel&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Angel Rodriguez</copyright>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://angelroddy.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I made it here...</title>
-      <link>https://example.com/post/creating-a-new-theme.1/</link>
+      <link>https://angelroddy.com/post/blog/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/creating-a-new-theme.1/</guid>
+      <guid>https://angelroddy.com/post/blog/</guid>
       <description>Welcome to my first post. I&#39;m excited that I can share my story with you. In less than a month, I&#39;ll be diving headfirst into a intensive web development bootcamp and I plan on taking time out to chronicle my experience.
  Fear of the unknown - image courtesy of Unsplash
 I&#39;ve been dabbling with code for a little over a year and, yes, I do feel that I&#39;ve learned a lot so far, but there are also some things I feel I&#39;m lacking in, too.</description>
@@ -25,10 +25,10 @@ I&#39;ve been dabbling with code for a little over a year and, yes, I do feel th
     
     <item>
       <title></title>
-      <link>https://example.com/about/desc/</link>
+      <link>https://angelroddy.com/about/desc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/desc/</guid>
+      <guid>https://angelroddy.com/about/desc/</guid>
       <description>Welcome to my blog! Web developer with a passion for front-end design and back-end architecture. I&#39;ve worked with many tech tools, including: JavaScript, React, jQuery, Sass, AWS,ActiveRecord, Node.js, JSON, Phaser3, Tiled, SQLite3, Ruby, Ruby on Rails, Sinatra, Heroku, Firebase, Hugo, Bootsrap, Materialize, HTML5, CSS3, Git and Github. Contact me if you like my work and would like to hire me. You can either email me at angelr1076@gmail.com or contact me on social media.</description>
     </item>
     

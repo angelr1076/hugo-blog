@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Angel&#39;s Blog</title>
-    <link>https://example.com/about/</link>
+    <link>https://angelroddy.com/about/</link>
     <description>Recent content in Abouts on Angel&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Angel Rodriguez</copyright>
     
-	<atom:link href="https://example.com/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://angelroddy.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://example.com/about/desc/</link>
+      <link>https://angelroddy.com/about/desc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/desc/</guid>
+      <guid>https://angelroddy.com/about/desc/</guid>
       <description>Welcome to my blog! Web developer with a passion for front-end design and back-end architecture. I&#39;ve worked with many tech tools, including: JavaScript, React, jQuery, Sass, AWS,ActiveRecord, Node.js, JSON, Phaser3, Tiled, SQLite3, Ruby, Ruby on Rails, Sinatra, Heroku, Firebase, Hugo, Bootsrap, Materialize, HTML5, CSS3, Git and Github. Contact me if you like my work and would like to hire me. You can either email me at angelr1076@gmail.com or contact me on social media.</description>
     </item>
     

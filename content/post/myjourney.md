@@ -4,6 +4,9 @@ date: 2018-06-13
 linktitle: My Journey
 menu:
   main:
+    parent: tutorials
+next: /tutorials/github-pages-blog
+prev: /tutorials/automated-deployments
 title: How I made it here...
 weight: 10
 ---
