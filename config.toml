@@ -8,7 +8,7 @@ copyright = "Angel Rodriguez"
 
 # googleAnalytics = ""
 
-# disqusShortname = ""
+disqusShortname = "@disqus_0pOA5fAtDy"
 
 # enableRobotsTXT = true
 
@@ -19,8 +19,8 @@ copyright = "Angel Rodriguez"
   avatar = "https://res.cloudinary.com/angelrodriguez/image/upload/v1541444428/Screen_Shot_2018-11-05_at_1.56.56_PM.png"
   
   email = "angelr1076@gmail.com"
-  # github = "www.github.com/angelr1076/"
-  # linkedin = "www.linkedin.com/in/angelrodriguezlead/"
+  github = "www.github.com/angelr1076/"
+  linkedin = "www.linkedin.com/in/angelrodriguezlead/"
   # codepen = ""
   # stackoverflow = ""
 

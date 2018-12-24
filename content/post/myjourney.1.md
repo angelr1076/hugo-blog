@@ -1,15 +1,19 @@
----
-author: "Angel Rodriguez"
-date: 2018-06-13
-linktitle: My Journey
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: How I made it here...
-weight: 10
----
++++
+title = "My Journey"
+description = "How I got into coding"
+tags = [
+    "JavaScript",
+    "Codecademy",
+    "Beginner",
+    "Journey",
+]
+date = "2018-06-13"
+categories = [
+    "JavaScript",
+    "Beginner",
+]
+menu = "main"
++++
 
 <p>Welcome to my first post. I'm excited that I can share my story with you. In less than a month, I'll be diving headfirst into a intensive web development bootcamp and I plan on taking time out to chronicle my experience.</p>
 
