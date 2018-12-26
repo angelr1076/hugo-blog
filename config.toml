@@ -1,7 +1,7 @@
 baseurl = "https://angelroddy.com"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Angel's Blog"
+title = "Angel Rodriguez"
 theme = "hugo-theme-dream"
 
 copyright = "Angel Rodriguez"
@@ -13,8 +13,8 @@ disqusShortname = "@disqus_0pOA5fAtDy"
 # enableRobotsTXT = true
 
 [params]
-  author = "Angel Rodriguez"
-  motto = "Portfolio site: angelroddie.com"
+  author = "Angel"
+  motto = "Front-End Web Developer"
   description = "A place to blog"
   avatar = "https://res.cloudinary.com/angelrodriguez/image/upload/v1541444428/Screen_Shot_2018-11-05_at_1.56.56_PM.png"
   

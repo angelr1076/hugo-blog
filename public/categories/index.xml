@@ -7,9 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Angel Rodriguez</copyright>
+    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://angelroddy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Beginner</title>
+      <link>https://angelroddy.com/categories/beginner/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://angelroddy.com/categories/beginner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Freecodecamp</title>
+      <link>https://angelroddy.com/categories/freecodecamp/</link>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://angelroddy.com/categories/freecodecamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://angelroddy.com/categories/javascript/</link>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://angelroddy.com/categories/javascript/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

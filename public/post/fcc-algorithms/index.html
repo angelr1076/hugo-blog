@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angel&#39;s Blog</title>
+
+  
+  
+  <meta name="author" content="Angel Rodriguez" />
+  <meta name="description" content="JavaScript Algorithms Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain there where you can find the conversion pretty much anywhere on the internet.
+Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used the built-in functions ‘return str." />
+
+
+
+<link href="https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,h_20,w_20/v1528903608/4.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+<meta name="generator" content="Hugo 0.50" />
+
+
+<link rel="canonical" href="https://angelroddy.com/post/fcc-algorithms/" />
+<link rel="alternative" href="/index.xml" title="Angel&#39;s Blog" type="application/atom+xml" />
+
+<link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+</head>
+
+<body>
+  <div class="flip-container">
+    <div class="flipper">
+      <section class="front">
+        
+<nav class="ui top secondary menu">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <a href="/">
+      <i class="inverted big link home icon" title="Home"></i>
+    </a>
+  </div>
+</nav>
+ 
+<div class="ui centered grid">
+  <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list post-single-main">
+
+    <section class="ui secondary top attached black segment">
+      <a class="ui black right corner label" href="javascript:void(0)" onclick="savePostAsImg()">
+        <i class="save icon"></i>
+      </a>
+      <header>
+        <h1 class="ui header">
+          FCC Algorithms Explained
+          <div class="sub header">@ Angel Rodriguez · Dec 24, 2018 · 6 min read · Update at Dec 24, 2018</div>
+        </h1>
+      </header>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+
+<h2 id="javascript-algorithms">JavaScript Algorithms</h2>
+
+<p>Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain there where you can find the conversion pretty much anywhere on the internet.</p>
+
+<p>Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used the built-in functions ‘return str.split(‘’).reverse().join(‘’);’ but I wanted to figure out another way of solving this aside from the most common route. I know FCC’s challenges are written in ES5, but I want to stay up to date and write all functions in ES6. At the end, I’ll print both the ES5 and ES6 functions.</p>
+
+<h2 id="reverse-a-string">Reverse a String</h2>
+
+<p>This one’s fairly simple. We start off with a function:</p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+   <dd>return str;</dd>
+<dd>}</dd></p>
+
+<p><dd>reverseString(“hello&rdquo;);</dd></p>
+
+<p>We have our return statement inside the function, which we will later need to adjust to fit the variable we created. Outside of the function, we have our test function call. We can add a few more once we complete this just to be sure the function works as it is intended to.</p>
+
+<p>Next, we’ll add a variable inside of our function, an empty string, to store our new string. We’ll call it “newString”. We’ll use the “let” keyword since we’re declaring the variable but also reassigning it with each iteration of our for loop. I’m assuming you understand that JavaScript variables are written in camel case as well.</p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+   <dd>let newString = “”;</dd></p>
+
+<p><dd>return str;</dd>
+<dd>}</dd></p>
+
+<p><dd>reverseString(“hello”);</dd></p>
+
+<p>Once the variable has been declared, we’ll create our for loop. A for loop consists of three statements: initial expression; condition; increment expression; All in that exact order.</p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+   <dd>let newString = “”;</dd></p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+  <dd>const newString = &ldquo;&rdquo;;</dd></p>
+
+<p><dd>for (let i = str.length -1; i &gt;= 0 ; i- -;) {</dd></p>
+
+<p><dd>}</dd></p>
+
+<p><dd>return str;</dd>
+<dd>}</dd></p>
+
+<p><dd>reverseString(“hello&rdquo;);</dd></p>
+
+<p>This is a little different than your typical for loop. If you’re fairly new to JavaScript, the (let i = str.length -1;) variable declaration might look a little off to you. What we’re trying to do here, with the -1, is start at the end of the string. You’ll see this at times when you’re trying to start at the end of the array, instead of 0 (beginning index of an array) you’ll declare a -1 which starts us off at the end. Next, we’ll tell the function that the index or i &gt;= 0; that way, when the loop runs its course, it stops at the 0 index instead of continuing past our declaration. Finally, since we’re starting at the end of the string, we want to decrement our index count till we hit 0 so we’ll adjust our increment expression (in this case our decrement expression) to i- -;</p>
+
+<p>Something you’ll want to do when testing your function is use your console.log() statement often. This helps you to better see what’s going on as you progress. We can add a console log to the for loop inside the block.</p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+  <dd>let newString = &ldquo;&rdquo;;</dd></p>
+
+<p><dd>for (let i = str.length -1; i &gt;= 0 ; i- -;) {</dd>
+  <dd>console.log(str[i]);</dd>
+ <dd>}<dd></p>
+
+<p><dd>return str;</dd>
+<dd>}</dd></p>
+
+<p><dd>reverseString(“hello”);</dd>
+<dd>reverseString(“Howdy”);</dd></p>
+
+<p><dd>“o”</dd>
+<dd>“l”</dd>
+<dd>“l”</dd>
+<dd>“e”</dd>
+<dd>‘h”</dd></p>
+
+<p><dd>“y”</dd>
+<dd>“d”</dd>
+<dd>“w”</dd>
+<dd>“o”</dd>
+<dd>“H”</dd></p>
+
+<p>By console logging str[i], we’re taking each iteration of the for loop running through each string. In this case, we know our function works because both strings have been reversed. We just need to add our statement inside the for loop to tell the loop what to do. Let&rsquo;s add “newString += str[i]” inside the for loop. This is the same as declaring, “newString = newString + str[i]”, but it’s just a shorthand version of the same statement. So now, our empty string variable is now equal to the “str” argument passed into the function. Let’s also change our return statement to return the newString variable, too!</p>
+
+<p><dd>reverseString = str =&gt; {</dd>
+  <dd>let newString = &ldquo;&rdquo;;</dd></p>
+
+<p><dd>for (let i = str.length -1; i &gt;= 0 ; i- -) {</dd>
+    <dd>newString += str[i];</dd>
+  <dd>}</dd></p>
+
+<p><dd>return newString;</dd>
+<dd>}</dd></p>
+
+<p><dd>reverseString(&ldquo;hello&rdquo;);</dd>
+<dd>reverseString(&ldquo;Howdy&rdquo;;</dd></p>
+
+<p>Finally, we have our reverseString function working. It can also be written in ES5 to pass the FCC test.</p>
+
+<p><dd>function reverseString (str) {</dd>
+   <dd>let newString = &ldquo;&rdquo;;</dd></p>
+
+<p><dd>for (let i = str.length -1; i &gt;= 0 ; i- -) {</dd>
+    <dd>newString += str[i];</dd>
+  <dd>}</dd></p>
+
+<p><dd>return newString;</dd>
+<dd>}</dd></p>
+
+<h2 id="factorialize-a-number">Factorialize a Number</h2>
+
+<p>This description is taken verbatim from the FCC challenge:</p>
+
+<p>“Return the factorial of the provided integer.
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+Factorials are often represented with the shorthand notation n!
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+Only integers greater than or equal to zero will be supplied to the function.”</p>
+
+<p>This algorithm is pretty straight forward. Let’s rule out any number 0 or below since the lowest factorial we will ever use is 1.</p>
+
+<p><dd>factorialize = num =&gt; {
+  <dd>if (num &lt;= 0) {
+    <dd>return 1;
+  <dd>}
+<dd>}</p>
+
+<p><dd>factorialize(5);</p>
+
+<p>What we’re doing here is creating a safeguard against an argument 0 or below. If this happens, let’s convert the number to 1 and run the function. When that happens, the return is 1. All we have to do now is return our execution sequence. We’ll do that below:</p>
+
+<p><dd>factorialize = num =&gt; {</dd>
+  <dd>if (num &lt;= 0 ) {</dd>
+    <dd>return 1;</dd>
+  <dd>}</dd>
+  <dd>return num * factorialize(num -1);</dd>
+<dd>}</dd>
+<dd>factorialize(5);</dd></p>
+
+<p>What we did here is take the argument passed, let’s say 5, and used recursion (calling a function inside a function, or in this example, a function calling itself). So we’ll take 5 x (5-1) or,
+5 x (4) until we get to the number 1. (5 * (4 * (3 * (2 * (1)))).</p>
+
+<p>Written in ES5 we have:
+<dd>function factorialize (num) {</dd>
+  <dd>if (num &lt;=0 ) {</dd>
+    <dd>return 1;</dd>
+  <dd>}</dd>
+  <dd>return num * factorialize(num -1);</dd>
+<dd>}</dd></p>
+
+<p><dd>factorialize(5); // 120</dd></p>
+
+<p>These aren’t complex algorithms at all, but when you’re beginning to work with JavaScript, especially at the time when the FCC modules stop the handholding, these can seem very confusing so I wanted to add my solutions and explanation of each process and hope that I can help a few people out in the process. I’ll be posting solutions each week on my blog if you’d like to visit me at angelroddy.com. You can also view my portfolio at angelroddie.com. Thanks for checking out my post!</p>
+</article>
+    </section>
+
+    <footer class="ui secondary attached segment dream-tags">
+      
+      
+      <a class="ui label" href="/tags/javascript" title="JavaScript">JavaScript</a>
+      
+      <a class="ui label" href="/tags/freecodecamp" title="freeCodeCamp">freeCodeCamp</a>
+      
+      <a class="ui label" href="/tags/beginner" title="Beginner">Beginner</a>
+      
+      <a class="ui label" href="/tags/algorithms" title="Algorithms">Algorithms</a>
+      
+      
+    </footer>
+
+    
+    <footer class="ui secondary attached segment">
+      Angel Rodriguez
+    </footer>
+    
+
+    
+    <footer class="ui secondary bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+      <div id="disqus_thread"></div>
+      <script>
+      
+
+      
+
+
+      var disqus_config = function () {
+      this.page.url = 'https:\/\/angelroddy.com\/post\/fcc-algorithms\/';  
+      this.page.identifier = '\/post\/fcc-algorithms\/'; 
+      };
+
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://' + '@disqus_0pOA5fAtDy' + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </footer>
+    
+
+  </div>
+  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+
+    <section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    
+    <img src="https://res.cloudinary.com/angelrodriguez/image/upload/v1541444428/Screen_Shot_2018-11-05_at_1.56.56_PM.png">
+    
+  </div>
+  <h3 class="ui header">Angel Rodriguez&#39;s blog<div class="sub header" style="color: white;">Portfolio site: angelroddie.com</div>
+  </h3>
+
+  <div class="ui inverted horizontal list">
+    
+    <a class="item" href="/post">
+      <i class="archive icon" title="Archives"></i>
+    </a>
+    
+    <a class="item" href="/tags">
+      <i class="tags icon" title="All Tags"></i>
+    </a>
+    <a class="item" href="/categories">
+      <i class="inverted cubes icon" title="All Categories"></i>
+    </a>
+  </div>
+
+  <a id="tag-category-pop" class="ui red right corner label">
+    <i class="pointing down icon" title="Click this to pop tags and categories"></i>
+  </a>
+</section>
+
+
+<section class="ui attached center aligned inverted segment dream-header-tags dream-tags">
+  
+  <a class="ui label" href="/tags/algorithms" title="algorithms">algorithms</a>
+  
+  <a class="ui label" href="/tags/beginner" title="beginner">beginner</a>
+  
+  <a class="ui label" href="/tags/codecademy" title="codecademy">codecademy</a>
+  
+  <a class="ui label" href="/tags/freecodecamp" title="freecodecamp">freecodecamp</a>
+  
+  <a class="ui label" href="/tags/javascript" title="javascript">javascript</a>
+  
+  <a class="ui label" href="/tags/journey" title="journey">journey</a>
+  
+</section>
+
+
+
+<section class="ui attached inverted segment dream-categories">
+  <div class="ui inverted accordion">
+    
+    <div class="title">
+      <i class="dropdown icon"></i>
+      <a href="/categories/beginner" class="item" style="color: white;">beginner</a>
+    </div>
+    <div class="content">
+      <div class="ui link inverted list">
+      
+      <div class="item" style="padding-left: 24px;">
+        <i class="cocktail icon"></i>
+        <div class="content">
+          <a href="https://angelroddy.com/post/myjourney.1/" class="item">My Journey</a>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+    <div class="title">
+      <i class="dropdown icon"></i>
+      <a href="/categories/freecodecamp" class="item" style="color: white;">freecodecamp</a>
+    </div>
+    <div class="content">
+      <div class="ui link inverted list">
+      
+      <div class="item" style="padding-left: 24px;">
+        <i class="cocktail icon"></i>
+        <div class="content">
+          <a href="https://angelroddy.com/post/fcc-algorithms/" class="item">FCC Algorithms Explained</a>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+    <div class="title">
+      <i class="dropdown icon"></i>
+      <a href="/categories/javascript" class="item" style="color: white;">javascript</a>
+    </div>
+    <div class="content">
+      <div class="ui link inverted list">
+      
+      <div class="item" style="padding-left: 24px;">
+        <i class="cocktail icon"></i>
+        <div class="content">
+          <a href="https://angelroddy.com/post/fcc-algorithms/" class="item">FCC Algorithms Explained</a>
+        </div>
+      </div>
+      
+      <div class="item" style="padding-left: 24px;">
+        <i class="cocktail icon"></i>
+        <div class="content">
+          <a href="https://angelroddy.com/post/myjourney.1/" class="item">My Journey</a>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    
+    <p>© 2018 Angel&#39;s Blog</p>
+    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+</section>
+
+
+  </div>
+</div>
+
+      </section>
+      <section class="back">
+        <nav class="ui top secondary menu" style="overflow-x: auto">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  
+  <div class="item">
+    <a href="mailto:angelr1076@gmail.com">
+      <i class="inverted big mail icon" title="email"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://github.com/www.github.com/angelr1076/" target="_blank">
+      <i class="inverted big github icon" title="github"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://www.linkedin.com/in/www.linkedin.com/in/angelrodriguezlead/" target="_blank">
+      <i class="inverted big linkedin icon" title="linkedin"></i>
+    </a>
+  </div>
+  
+  
+  
+</nav>
+
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+
+    <section class="ui stacked segments">
+      <header class="ui inverted segment">
+        <h2 class="ui header">
+          About Me
+        </h2>
+      </header>
+
+      <article class="ui inverted segment back-about">
+        <div class="ui stackable three column grid">
+          <div class="column">
+              
+              <h1>Welcome to my blog!</h1>
+
+<p>Front-end web developer with a passion for design and code architecture. I have experience with JavaScript, React, jQuery, Sass, AWS, ActiveRecord, Node.js, JSON, Phaser3, Tiled, SQLite3, Ruby, Ruby on Rails, Sinatra, Heroku, Firebase, Hugo, Bootsrap, Materialize, HTML5, CSS3, Git and Github. Please contact me if you have questions or comments. You can email me at angelr1076@gmail.com or contact me on social media.
+              
+          </div>
+          <div class="column">
+              
+          </div>
+          <div class="column">
+              
+          </div>
+        </div>
+      </article>
+
+      
+      <footer class="ui secondary segment">
+        Angel Rodriguez
+      </footer>
+      
+
+      
+      
+    </section>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+  </div>
+
+  
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/bg.js"></script>
+<script src="/js/site.js"></script>
+
+
+
+</body>
+
+</html>
