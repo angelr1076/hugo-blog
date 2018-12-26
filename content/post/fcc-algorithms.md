@@ -15,107 +15,109 @@ categories = [
 menu = "main"
 +++
 
-## JavaScript Algorithms
+# JavaScript Algorithms
 
-Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain there where you can find the conversion pretty much anywhere on the internet. 
-
-Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used the built-in functions ‘return str.split(‘’).reverse().join(‘’);’ but I wanted to figure out another way of solving this aside from the most common route. I know FCC’s challenges are written in ES5, but I want to stay up to date and write all functions in ES6. At the end, I’ll print both the ES5 and ES6 functions. 
+Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain here and you can find the conversion pretty much anywhere on the internet.
 
 ## Reverse a String
 
+Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used the built-in functions and chained them together like so:
+
+```return str.split(‘’).reverse().join(‘’);```
+
+ I wanted to figure out another way of solving this aside from the most common route. I know FCC’s challenges are written in ES5, but I want to stay up to current and write all functions in ES6. Once we finish solving each problem, I’ll print both the functions in ES5 and ES6 syntax.
+
 This one’s fairly simple. We start off with a function:
 
-<dd>reverseString = str => {</dd>
-   <dd>return str;</dd>
-<dd>}</dd>
+```reverseString = str => {```
 
-<dd>reverseString(“hello");</dd>
+  <dd>```return str;```</dd>
 
-We have our return statement inside the function, which we will later need to adjust to fit the variable we created. Outside of the function, we have our test function call. We can add a few more once we complete this just to be sure the function works as it is intended to. 
+```}```
 
-Next, we’ll add a variable inside of our function, an empty string, to store our new string. We’ll call it “newString”. We’ll use the “let” keyword since we’re declaring the variable but also reassigning it with each iteration of our for loop. I’m assuming you understand that JavaScript variables are written in camel case as well. 
+```reverseString(“hello”);```
 
-<dd>reverseString = str => {</dd>
-   <dd>let newString = “”;</dd>
+We have our return statement inside the function, which we will later need to adjust to fit the variable we created. Outside of the function, we have our test function call. We can add a few more once we complete this just to be sure the function works as it is intended to.
 
-   <dd>return str;</dd>
-<dd>}</dd>
+Next, we’ll add a variable inside of our function, an empty string, to store our new string. We’ll call it “newString”. We’ll use the “let” keyword since we’re declaring the variable but also reassigning it with each iteration of our for loop.
 
-<dd>reverseString(“hello”);</dd>
+```reverseString = str => {```
+  <dd>```let newString;```</dd>
 
-Once the variable has been declared, we’ll create our for loop. A for loop consists of three statements: initial expression; condition; increment expression; All in that exact order. 
+  <dd>```return str;```</dd>
 
-<dd>reverseString = str => {</dd>
-   <dd>let newString = “”;</dd>
-   
-<dd>reverseString = str => {</dd>
-  <dd>const newString = "";</dd>
-  
-  <dd>for (let i = str.length -1; i >= 0 ; i- -;) {</dd>
+```}```
 
- <dd>}</dd>
+```reverseString(“hello”);```
 
-  <dd>return str;</dd>
-<dd>}</dd>
+Once the variable has been declared, we’ll create our for loop. A for loop consists of three statements: initial expression; condition; increment expression; All in that exact order.
 
-<dd>reverseString(“hello");</dd>
+```reverseString = str => {```
+  <dd>```let newString;```</dd>
 
-This is a little different than your typical for loop. If you’re fairly new to JavaScript, the (let i = str.length -1;) variable declaration might look a little off to you. What we’re trying to do here, with the -1, is start at the end of the string. You’ll see this at times when you’re trying to start at the end of the array, instead of 0 (beginning index of an array) you’ll declare a -1 which starts us off at the end. Next, we’ll tell the function that the index or i >= 0; that way, when the loop runs its course, it stops at the 0 index instead of continuing past our declaration. Finally, since we’re starting at the end of the string, we want to decrement our index count till we hit 0 so we’ll adjust our increment expression (in this case our decrement expression) to i- -;
+  <dd>```for (let i = str.length -1; i >= 0 ; i--) {```</dd>
 
-Something you’ll want to do when testing your function is use your console.log() statement often. This helps you to better see what’s going on as you progress. We can add a console log to the for loop inside the block. 
-   
-<dd>reverseString = str => {</dd>
-  <dd>let newString = "";</dd>
-  
-  <dd>for (let i = str.length -1; i >= 0 ; i- -;) {</dd>
-  <dd>console.log(str[i]);</dd>
- <dd>}<dd>
+  <dd>```return str;```</dd>
 
-  <dd>return str;</dd>
-<dd>}</dd>
+```}```
 
-<dd>reverseString(“hello”);</dd>
-<dd>reverseString(“Howdy”);</dd>
+```reverseString(“hello”);```
+```reverseString(“Howdy”);```
 
-<dd>“o”</dd>
-<dd>“l”</dd>
-<dd>“l”</dd>
-<dd>“e”</dd>
-<dd>‘h”</dd>
+This is a little different than your typical for loop. If you’re fairly new to JavaScript, the ```(let i = str.length -1;)``` variable declaration might look a little off to you. What we’re trying to do here, with the -1, is start at the end of the string. You’ll see this at times when you’re want to begin at the end of the array, instead of 0 (beginning index of an array) you’ll declare a -1 which starts us off at the end. Next, we’ll tell the function that the index or i >= 0; that way, when the loop runs its course, it stops at the 0 index instead of continuing past our declaration. Finally, since we’re starting at the end of the string, we want to decrement our index count till we hit 0 so we’ll adjust our increment expression (in this case, decrement) to ```i--;```.
 
-<dd>“y”</dd>
-<dd>“d”</dd>
-<dd>“w”</dd>
-<dd>“o”</dd>
-<dd>“H”</dd>
-
-By console logging str[i], we’re taking each iteration of the for loop running through each string. In this case, we know our function works because both strings have been reversed. We just need to add our statement inside the for loop to tell the loop what to do. Let's add “newString += str[i]” inside the for loop. This is the same as declaring, “newString = newString + str[i]”, but it’s just a shorthand version of the same statement. So now, our empty string variable is now equal to the “str” argument passed into the function. Let’s also change our return statement to return the newString variable, too!
+Something you’ll want to do when testing your function is use your console.log() statement often. This helps you to better see what’s going on as you progress. We can add a console log to the for loop inside the block. If you're using Chrome, on a Mac that's option, command, i to open up the browser console. You can also right click in the browser and select 'inspect'.
 
 
-<dd>reverseString = str => {</dd>
-  <dd>let newString = "";</dd>
-  
-  <dd>for (let i = str.length -1; i >= 0 ; i- -) {</dd>
-    <dd>newString += str[i];</dd>
-  <dd>}</dd>
+```reverseString = str => {```
+  <dd>```let newString;```</dd>
 
-  <dd>return newString;</dd>
-<dd>}</dd>
+  <dd>```for (let i = str.length -1; i >= 0 ; i--) {```</dd>
+  <dd>```console.log(str[i])```</dd>
 
-<dd>reverseString("hello");</dd>
-<dd>reverseString("Howdy";</dd>
+  <dd>```return str;```</dd>
+
+```}```
+
+```reverseString(“hello”);```
+```reverseString(“Howdy”);```
+
+<dd>```“o”```</dd>
+<dd>```“l”```</dd>
+<dd>```“l”```</dd>
+<dd>```“e”```</dd>
+<dd>```‘h”```</dd>
+
+<dd>```“y”```</dd>
+<dd>```“d”```</dd>
+<dd>```“w”```</dd>
+<dd>```“o”```</dd>
+<dd>```“H”```</dd>
+
+By console logging str[i], we’re taking a snapshot of each iteration in the for loop running through each of the two strings. In this case, we know our function works because both strings have been reversed. We just need to add our statement inside the for loop to tell the loop what to do. Let's add ```newString += str[i]``` inside the for loop. This is the same as declaring, ```newString = newString + str[i]```, but it’s just a shorthand version of the same statement. So now, our empty string variable is now equal to the ```str``` argument passed into the function. Let’s also change our return statement to return the newString variable, too!
+
+```reverseString = str => {```
+  <dd>```let newString;```</dd>
+
+  <dd>```for (let i = str.length -1; i >= 0 ; i--) {```</dd>
+  <dd>```newString += str[i];```</dd>
+
+  <dd>```return newString;```</dd>
+
+```}```
 
 Finally, we have our reverseString function working. It can also be written in ES5 to pass the FCC test. 
 
-<dd>function reverseString (str) {</dd>
-   <dd>let newString = "";</dd>
-  
-  <dd>for (let i = str.length -1; i >= 0 ; i- -) {</dd>
-    <dd>newString += str[i];</dd>
-  <dd>}</dd>
 
-  <dd>return newString;</dd>
-<dd>}</dd>
+```function reverseString (str) {```
+  <dd>```let newString;```</dd>
+
+  <dd>```for (let i = str.length -1; i >= 0 ; i--) {```</dd>
+  <dd>```newString += str[i];```</dd>
+
+  <dd>```return newString;```</dd>
+
+```}```
 
 
 ## Factorialize a Number
@@ -130,36 +132,36 @@ Only integers greater than or equal to zero will be supplied to the function.”
 
 This algorithm is pretty straight forward. Let’s rule out any number 0 or below since the lowest factorial we will ever use is 1. 
 
-<dd>factorialize = num => {
-  <dd>if (num <= 0) {
-    <dd>return 1;
-  <dd>}
-<dd>}
+```factorialize = num => {```
+  <dd>```if (num <= 0) {```</dd>
+    <dd>```return 1;```</dd>
+  <dd>```}```</dd>
+```}```
 
-<dd>factorialize(5);
+```factorialize(5);```
 
 What we’re doing here is creating a safeguard against an argument 0 or below. If this happens, let’s convert the number to 1 and run the function. When that happens, the return is 1. All we have to do now is return our execution sequence. We’ll do that below:
 
-<dd>factorialize = num => {</dd>
-  <dd>if (num <= 0 ) {</dd>
-    <dd>return 1;</dd>
-  <dd>}</dd>
-  <dd>return num * factorialize(num -1);</dd>
-<dd>}</dd>
-<dd>factorialize(5);</dd>
+```factorialize = num => {```
+  <dd>```if (num <= 0) {```</dd>
+    <dd>```return 1;```</dd>
+  <dd>```}```</dd>
+  <dd>```return num * factorialize(num -1);```</dd>
+```}```
+
+```factorialize(5);```
 
 What we did here is take the argument passed, let’s say 5, and used recursion (calling a function inside a function, or in this example, a function calling itself). So we’ll take 5 x (5-1) or, 
 5 x (4) until we get to the number 1. (5 * (4 * (3 * (2 * (1)))). 
 
 Written in ES5 we have:
-<dd>function factorialize (num) {</dd>
-  <dd>if (num <=0 ) {</dd>
-    <dd>return 1;</dd>
-  <dd>}</dd>
-  <dd>return num * factorialize(num -1);</dd>
-<dd>}</dd>
+```function factorialize (num) {```
+  <dd>```if (num <= 0) {```</dd>
+    <dd>```return 1;```</dd>
+  <dd>```}```</dd>
+  <dd>```return num * factorialize(num -1);```</dd>
+```}```
 
-<dd>factorialize(5); // 120</dd>
+```factorialize(5);```
 
-These aren’t complex algorithms at all, but when you’re beginning to work with JavaScript, especially at the time when the FCC modules stop the handholding, these can seem very confusing so I wanted to add my solutions and explanation of each process and hope that I can help a few people out in the process. I’ll be posting solutions each week on my blog if you’d like to visit me at angelroddy.com. You can also view my portfolio at angelroddie.com. Thanks for checking out my post!
-
+These aren’t complex algorithms, but when you’re beginning to work with JavaScript, especially at the time when the FCC modules stop with the handholding, these can seem very confusing so I wanted to add my solutions and an explanation of each process, step-by-step, and hope that I can help a few people out in the process. I’ll be posting solutions each week on my blog if you’d like to visit me at angelroddy.com. You can also view my portfolio site at angelroddie.com. Thanks for checking out my post!
